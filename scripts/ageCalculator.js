@@ -3,6 +3,13 @@ userInput.max = new Date().toISOString().split("T")[0];
 let result = document.getElementById("result");
 
 function calculateAge() {
+
+  if(userInput.value === "") {
+    alert("Please enter a valid date.");
+    return;
+  }
+
+
   let birthdate = new Date(userInput.value);
       
     let d1 = birthdate.getDate();
